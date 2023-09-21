@@ -1,0 +1,106 @@
+@{
+    ViewData["Title"] = "My Project Brief";
+}
+
+<div class="text-center">
+
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+
+    <section>
+        <h2 class="mt-5">🦋Company Info🦋</h2>
+
+        <table class="table table-striped table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                
+                    <th>Company Description</th>
+                
+                    <th>Group Members And Roles</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var department in Model)
+                {
+                    <tr>
+                        <th>@department["Company"]</th>
+                        <th>@department["Company-Description"]</th>
+                        <th>@department["Group-Members-And-Roles"]</th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+
+    @* Proposal section *@
+    <section>
+        <h2 class="mt-5">🦋Proposal🦋</h2>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>Features❗❗</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">What are we gonna serve❓❓</h5>
+                <p class="card-text">
+                    Your daily life will be made easier by this tiny collection of web pages. Both the unemployed and
+                    those in need will benefit from it.
+                    Furthermore, there is no need to fear because the administrator has full access. Do not be concerned
+                    about privacy 😉.
+                </p>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>Our service</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Find work⚒️ OR Find worker👷</h5>
+                <p class="card-text">
+                    To help them select the right worker for their needs, this website will include all registered
+                    workers, including painters, plumbers, maids,
+                    and carpenters. As an alternative, the worker can identify work that has been offered by someone in
+                    need and obtain some work to do, whether
+                    it be a part-time or full-time employment depending on the ad.
+                </p>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>Purpose</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Industrial Purpose 🏭</h5>
+                <p class="card-text">
+                    This website will bridge the gap between job seekers/workers and service providers/customers in
+                    various industries. It will
+                    provide a platform for job listings, worker profiles, and job matching, making it easier for both
+                    job seekers and employers to
+                    find suitable opportunities or workers. This type of platform can be particularly useful in the gig
+                    economy, where flexible
+                    employment arrangements are common.
+                </p>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h3>Roles</h3>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">User roles 👥</h5>
+                <p class="card-text">
+                    Three dashboards, namely Worker, Citizen, and Admin, will be available on this website. Both the
+                    employee and the citizen must
+                    sign in, fill up profile forms, publish criteria, and look for employment individually. Both
+                    dashboards will be accessible to
+                    the administrator.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</div>
